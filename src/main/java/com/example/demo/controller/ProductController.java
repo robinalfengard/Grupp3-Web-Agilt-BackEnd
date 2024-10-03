@@ -16,40 +16,48 @@ public class ProductController {
         this.productService = productService;
     }
 
+
+    // WORKS
     @GetMapping("/allproducts")
     public ResponseEntity<Iterable<Product>> getAllProducts(){
         Iterable<Product> products= productService.getAllProducts();
         return ResponseEntity.ok(products);
     }
 
+    // WORKS
     @GetMapping("/{id}")
     public ResponseEntity<Product> getProductById(@PathVariable Integer id) {
         Product product = productService.getProductById(id);
         return ResponseEntity.ok(product);
     }
 
+
     @PostMapping("/add")
     public ResponseEntity<Product> addProduct(@RequestBody Product product) {
-        Product newProduct = productService.saveProduct(product);
+        productService.saveProduct(product);
         return ResponseEntity.ok(product);
     }
 
+    // failed because of foreign key constraints
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> deleteProduct(@PathVariable Integer id) {
         productService.deleteProduct(id);
         return ResponseEntity.ok().build();
     }
 
+
     @PutMapping("/update/{id}")
     public ResponseEntity<Product> updateProduct(@PathVariable Integer id, Product product) {
         Product updatedProduct = productService.updateProduct(id, product);
         return ResponseEntity.ok(updatedProduct);
     }
-    
+
+
+    // WORKS
     @GetMapping("/category/{categoryId}")
     public ResponseEntity<Iterable<Product>> getProductByCategoryId(@PathVariable Integer categoryId){
-        Iterable<Product> listProductByCategoryId=productService.getAllProductsByCategoryId(categoryId);
-        return (ResponseEntity<Iterable<Product>>) listProductByCategoryId;
+        Iterable<Product> listProductByCategoryId = productService.getAllProductsByCategoryId(categoryId);
+        return ResponseEntity.ok(listProductByCategoryId);
     }
 
 }

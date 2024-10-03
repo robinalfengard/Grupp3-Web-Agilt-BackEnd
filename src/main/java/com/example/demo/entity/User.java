@@ -19,10 +19,6 @@ public class User {
     private String city;
     private String address;
 
-    @OneToMany(mappedBy = "user")
-    private List<SoldProduct> soldProducts;
 
-    @OneToMany(mappedBy = "user")
-    private List<FavoriteItem> favoriteItems;
 
 }

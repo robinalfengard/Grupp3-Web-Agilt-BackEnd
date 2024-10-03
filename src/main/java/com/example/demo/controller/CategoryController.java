@@ -18,6 +18,7 @@ public class CategoryController {
         this.productService = productService;
     }
 
+    // WORKS
     @GetMapping("/all")
     public Iterable<Category> getAll(){
         return categoryService.findALl();

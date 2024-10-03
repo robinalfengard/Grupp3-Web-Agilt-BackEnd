@@ -26,7 +26,7 @@ public class SoldItemService {
         this.productRepository = productRepository;
     }
 
-    public List<Product> getListOfItemsByUserId(int userId){
+    public List<SoldProduct> getListOfItemsByUserId(int userId){
         Optional<User> user = userRepository.findById(userId);
         if (user.isEmpty()) {
             return List.of();

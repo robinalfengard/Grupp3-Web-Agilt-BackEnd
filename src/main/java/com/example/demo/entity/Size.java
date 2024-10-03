@@ -17,7 +17,5 @@ public class Size {
     // Should be setup in the database (S, M , L, XL, XXL)
     private String name;
 
-    @OneToMany(mappedBy = "size")
-    private List<Product> products;
 
 }

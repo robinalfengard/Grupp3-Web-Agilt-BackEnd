@@ -11,5 +11,5 @@ import java.util.List;
 @Repository
 public interface SoldItemRepository extends CrudRepository<SoldProduct, Long> {
 
-    List<Product> findProductsByUser(User user);
+    List<SoldProduct> findProductsByUser(User user);
 }

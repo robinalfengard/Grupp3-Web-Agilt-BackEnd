@@ -17,16 +17,17 @@ public class SoldProductController {
         this.soldItemService = soldItemSoldService;
     }
 
+    // WORKS
     @GetMapping("/{userId}")
-    public ResponseEntity<List<Product>> listOfItemsBoughtBySpecificUser(@PathVariable int userId) {
-        List<Product> products = soldItemService.getListOfItemsByUserId(userId);
-        if (products.isEmpty()) {
+    public ResponseEntity<List<SoldProduct>> listOfItemsBoughtBySpecificUser(@PathVariable int userId) {
+        List<SoldProduct> soldProducts = soldItemService.getListOfItemsByUserId(userId);
+        if (soldProducts.isEmpty()) {
             return ResponseEntity.notFound().build();  
         }
-        return ResponseEntity.ok(products);
+        return ResponseEntity.ok(soldProducts);
     }
-
-    @PostMapping("/{userId}/{itemId}")
+    // WORKS
+    @PostMapping("")
     public ResponseEntity<String> itemSold(@RequestBody SoldProduct soldProduct) {
         String result = soldItemService.saveSoldItem(soldProduct);
         return ResponseEntity.ok(result);
