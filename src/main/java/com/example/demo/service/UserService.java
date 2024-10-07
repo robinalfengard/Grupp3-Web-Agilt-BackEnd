@@ -4,6 +4,8 @@ import com.example.demo.entity.User;
 import com.example.demo.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
+import static java.util.regex.Pattern.matches;
+
 @Service
 public class UserService {
     private final UserRepository userRepository;
@@ -14,5 +16,15 @@ public class UserService {
 
     public void save(User usersignup) {
         userRepository.save(usersignup);
+    }
+
+    public User login(String email, String password) {
+        User user = userRepository.findByEmail(email);
+        if(user != null && matches(password, user.getPassword())) {
+            return user;
+        }
+        else {
+            return null;
+        }
     }
 }

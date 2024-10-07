@@ -27,10 +27,6 @@ public class Product {
     @JoinColumn(name = "size_id", referencedColumnName = "id")
     private Size size;
 
-    @OneToMany(mappedBy = "product")
-    private List<SoldProduct> soldProducts;
 
-    @OneToMany(mappedBy = "product")
-    private List<FavoriteItem> favoriteItems;
 
 }
