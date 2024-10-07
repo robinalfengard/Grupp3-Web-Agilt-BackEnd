@@ -18,6 +18,12 @@ public class UserService {
         userRepository.save(usersignup);
     }
 
+    public User getUserByEmail(String email) {
+        return userRepository.findByEmail(email);
+    }
+
+    public Iterable<User> getAllUsers() { return userRepository.findAll(); }
+
     public User login(String email, String password) {
         User user = userRepository.findByEmail(email);
         if(user != null && matches(password, user.getPassword())) {
