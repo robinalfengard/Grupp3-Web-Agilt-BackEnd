@@ -2,10 +2,12 @@ INSERT INTO user (id, first_name, last_name, email, password, city, address)
 VALUES
     (1, 'John', 'Doe', 'john.doe@example.com', 'password123', 'New York', '123 Main St'),
     (2, 'Jane', 'Smith', 'jane.smith@example.com', 'password456', 'Los Angeles', '456 Elm St');
-INSERT INTO category (id, name)
+INSERT INTO category (id, name , image)
 VALUES
-    (1, 'Clothing'),
-    (2, 'Accessories');
+    (1, 'Outdoor','/categoryImage/outdoor.avif'),
+    (2, 'Accessories', '/categoryImage/Accessories.avif'),
+    (3,'Trousers', '/categoryImage/trousers.avif'),
+    (4,'Skor', '/categoryImage/skor.avif');
 INSERT INTO size (id, name)
 VALUES
     (1, 'M'),
