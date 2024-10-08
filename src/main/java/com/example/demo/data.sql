@@ -11,7 +11,10 @@ VALUES
 INSERT INTO size (id, name)
 VALUES
     (1, 'M'),
-    (2, 'L');
+    (2, 'L'),
+    (3, 'XL'),
+    (4, 'S'),
+    (5,'XS');
 INSERT INTO product (id, name, description, image, on_sale, price, number_in_stock, category_id, size_id)
 VALUES
     (1, 'T-shirt', 'A comfortable cotton t-shirt.', 'tshirt.jpg', true, 19.99, 50, 1, 1),
