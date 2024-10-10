@@ -7,7 +7,7 @@ VALUES
     (1, 'Outdoor','/categoryImage/outdoor.avif'),
     (2, 'Accessories', '/categoryImage/Accessories.avif'),
     (3,'Trousers', '/categoryImage/trousers.avif'),
-    (4,'Skor', '/categoryImage/skor.avif');
+    (4,'Shoes', '/categoryImage/skor.avif');
 INSERT INTO size (id, name)
 VALUES
     (1, 'M'),
