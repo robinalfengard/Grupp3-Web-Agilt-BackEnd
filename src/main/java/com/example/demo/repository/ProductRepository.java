@@ -11,4 +11,7 @@ public interface ProductRepository extends CrudRepository<Product, Integer> {
 
     @Query("SELECT p FROM Product p WHERE p.category.id = :categoryId")
     Iterable<Product> getAllProductsByCategoryId(@Param("categoryId") Integer categoryId);
+
+    @Query("SELECT p FROM Product p WHERE p.onSale = true")
+    Iterable<Product> getOnSaleProducts();
 }

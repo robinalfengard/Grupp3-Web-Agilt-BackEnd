@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/product")
-@CrossOrigin(origins = "http://localhost:8081")
+@CrossOrigin(origins = "http://localhost:3000")
 public class ProductController {
     private final ProductService productService;
 
@@ -59,6 +59,11 @@ public class ProductController {
     public ResponseEntity<Iterable<Product>> getProductByCategoryId(@PathVariable Integer categoryId){
         Iterable<Product> listProductByCategoryId = productService.getAllProductsByCategoryId(categoryId);
         return ResponseEntity.ok(listProductByCategoryId);
+    }
+    @GetMapping("/onsale")
+    public ResponseEntity<Iterable<Product>> getOnSaleProducts(){
+        Iterable<Product> onSaleProducts = productService.getOnSaleProducts();
+        return ResponseEntity.ok(onSaleProducts);
     }
 
 }
