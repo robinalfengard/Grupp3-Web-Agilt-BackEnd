@@ -3,7 +3,10 @@ import com.example.demo.entity.FavoriteItem;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-@Repository
-interface FavoriteItemRepository extends CrudRepository<FavoriteItem, Long> {
+import java.util.List;
 
+@Repository
+public interface FavoriteItemRepository extends CrudRepository<FavoriteItem, Long> {
+
+    List<FavoriteItem> getFavoriteItemsByUserId(int userId);
 }
