@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/soldProduct")
+@CrossOrigin(origins = "http://localhost:3000")
 public class SoldProductController {
 
     private final SoldItemService soldItemService;
@@ -25,6 +26,12 @@ public class SoldProductController {
             return ResponseEntity.notFound().build();  
         }
         return ResponseEntity.ok(soldProducts);
+    }
+
+    @DeleteMapping("/{userId}/{productId}")
+    public ResponseEntity<Void> deleteProductFromCart(@PathVariable Long userId, @PathVariable Long productId) {
+        soldItemService.deleteProductFromCart(userId, productId);
+        return ResponseEntity.noContent().build();
     }
     // WORKS
     @PostMapping("")
