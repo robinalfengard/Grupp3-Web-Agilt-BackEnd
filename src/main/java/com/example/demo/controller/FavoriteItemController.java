@@ -30,4 +30,10 @@ public class FavoriteItemController {
         return ResponseEntity.ok(favoriteItemService.addFavoriteItem(favoriteItem));
     }
 
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<Void> deleteFavoriteItem(@PathVariable Long id) {
+        favoriteItemService.deleteFavoriteItem(id);
+        return ResponseEntity.ok().build();
+    }
+
 }

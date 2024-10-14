@@ -25,4 +25,8 @@ public class FavoriteItemService {
     public FavoriteItem addFavoriteItem(FavoriteItem favoriteItem) {
         return favoriteItemRepository.save(favoriteItem);
     }
+
+    public void deleteFavoriteItem(Long id) {
+        favoriteItemRepository.deleteById(id);
+    }
 }
