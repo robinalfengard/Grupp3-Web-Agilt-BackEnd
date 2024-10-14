@@ -51,4 +51,8 @@ public class ProductService {
     public Iterable<Product> getAllProductsByCategoryId(Integer categoryId) {
         return productRepository.getAllProductsByCategoryId(categoryId);
     }
+
+    public Iterable<Product> getOnSaleProducts() {
+        return productRepository.getOnSaleProducts();
+    }
 }
