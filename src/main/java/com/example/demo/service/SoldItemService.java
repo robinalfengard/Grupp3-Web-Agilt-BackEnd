@@ -40,4 +40,11 @@ public class SoldItemService {
         return "Save Sold Item Successful";
     }
 
+
+    public void deleteProductFromCart(Long userId, Long productId) {
+        User user = userRepository.findById(Math.toIntExact(userId)).orElseThrow(() -> new RuntimeException("User not found"));
+        Product product = productRepository.findById(Math.toIntExact(productId)).orElseThrow(() -> new RuntimeException("Product not found"));
+
+        soldItemRepository.deleteByUserAndProduct(user, product);
+    }
 }
