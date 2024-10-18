@@ -15,10 +15,7 @@ VALUES
     (3, 'XL'),
     (4, 'S'),
     (5,'XS');
-INSERT INTO product (id, name, description, image, on_sale, price, number_in_stock, category_id, size_id)
-VALUES
-    (1, 'T-shirt', 'A comfortable cotton t-shirt.', 'tshirt.jpg', true, 19.99, 50, 1, 1),
-    (2, 'Jeans', 'Stylish denim jeans.', 'jeans.jpg', false, 49.99, 100, 1, 2);
+
 INSERT INTO sold_product (id, user_id, product_id, date_when_sold)
 VALUES
     (1, 1, 1, '2024-10-01'),
