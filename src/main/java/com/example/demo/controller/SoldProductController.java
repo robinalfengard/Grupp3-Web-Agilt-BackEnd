@@ -39,4 +39,10 @@ public class SoldProductController {
         String result = soldItemService.saveSoldItem(soldProduct);
         return ResponseEntity.ok(result);
     }
+    @PutMapping("/checkout/{userId}")
+    public ResponseEntity<String> checkout(@PathVariable int userId,@RequestBody SoldProduct updateSoldProduct) {
+        List<SoldProduct> soldProducts = soldItemService.getListOfItemsByUserId(userId);
+        soldItemService.updateListOfItems(soldProducts, updateSoldProduct);
+        return ResponseEntity.ok("Checkout Successful");
+    }
 }

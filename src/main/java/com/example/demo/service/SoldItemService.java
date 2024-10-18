@@ -47,4 +47,18 @@ public class SoldItemService {
 
         soldItemRepository.deleteByUserAndProduct(user, product);
     }
+
+
+    public void updateListOfItems(List<SoldProduct> soldProducts, SoldProduct updateSoldProduct) {
+        soldProducts.forEach(soldProduct -> {
+            if (soldProduct.getPaymentStatus() == SoldProduct.PaymentStatus.PENDING) {
+                soldProduct.setPaymentStatus(updateSoldProduct.getPaymentStatus());
+                soldProduct.setPaymentType(updateSoldProduct.getPaymentType());
+                soldProduct.setPostType(updateSoldProduct.getPostType());
+                soldItemRepository.save(soldProduct);
+            }
+        });
+    }
+
 }
+
