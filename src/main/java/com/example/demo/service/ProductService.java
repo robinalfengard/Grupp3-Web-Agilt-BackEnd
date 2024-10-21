@@ -1,22 +1,28 @@
 package com.example.demo.service;
 
 import com.example.demo.entity.Product;
+import com.example.demo.entity.Size;
 import com.example.demo.repository.CategoryRepository;
 import com.example.demo.repository.ProductRepository;
+import com.example.demo.repository.SizeRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 import org.springframework.http.HttpStatus;
 
+import java.util.Arrays;
 import java.util.List;
 
 @Service
 public class ProductService {
     private final ProductRepository productRepository;
     private final CategoryRepository categoryRepository;
+    private final SizeRepository sizeRepository;
 
-    public ProductService(ProductRepository productRepository, CategoryRepository categoryRepository) {
+    public ProductService(ProductRepository productRepository, CategoryRepository categoryRepository,
+                          SizeRepository sizeRepository) {
         this.productRepository = productRepository;
         this.categoryRepository = categoryRepository;
+        this.sizeRepository = sizeRepository;
     }
 
     public Iterable<Product> getAllProducts() {
@@ -24,7 +30,11 @@ public class ProductService {
     }
 
     public Product getProductById(Integer id) {
-        return productRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Product not found"));
+        Product product = productRepository.findById(id).orElse(null);
+        if (product.getSizes() == null || product.getSizes().isEmpty()) {
+            product.setSizes(getDefaultSizes());
+        }
+        return product;
     }
 
     public Product saveProduct(Product product) {
@@ -55,4 +65,9 @@ public class ProductService {
     public Iterable<Product> getOnSaleProducts() {
         return productRepository.getOnSaleProducts();
     }
+
+    private List<Size> getDefaultSizes() {
+        return sizeRepository.getDefaultSizes();
+    }
+
 }
