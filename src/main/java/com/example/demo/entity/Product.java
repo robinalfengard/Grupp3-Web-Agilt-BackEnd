@@ -23,9 +23,13 @@ public class Product {
     @JoinColumn(name = "category_id", referencedColumnName = "id")
     private Category category;
 
-    @ManyToOne
-    @JoinColumn(name = "size_id", referencedColumnName = "id")
-    private Size size;
+    @ManyToMany
+    @JoinTable(
+            name = "product_size",
+            joinColumns = @JoinColumn(name = "product_id"),
+            inverseJoinColumns = @JoinColumn(name = "size_id")
+    )
+    private List<Size> sizes;
 
 
 
