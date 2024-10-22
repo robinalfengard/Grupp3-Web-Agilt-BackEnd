@@ -53,3 +53,45 @@ VALUES
     (38, 'Sandals', 'Casual sandals with adjustable straps', '/productImage/sandals.avif', 0, 59.99, 70, 4, 4),
     (39, 'Slippers', 'Cozy slippers with soft inner lining', '/productImage/slippers.avif', 1, 29.99, 200, 4, 4),
     (40, 'Formal Shoes', 'Classic formal shoes made from genuine leather', '/productImage/formal_shoes.avif', 0, 149.99, 25, 4, 4);
+
+-- Add sizes S (1), M (2), L (3), XL (4), XXL (5) to each product in Outdoor category
+
+-- Outdoor Jacket (Product ID: 1)
+INSERT INTO product_size (product_id, size_id) VALUES
+                                                   (1, 1), (1, 2), (1, 3), (1, 4), (1, 5);
+
+-- Fleece Hoodie (Product ID: 2)
+INSERT INTO product_size (product_id, size_id) VALUES
+                                                   (2, 1), (2, 2), (2, 3), (2, 4), (2, 5);
+
+-- Rain Pants (Product ID: 3)
+INSERT INTO product_size (product_id, size_id) VALUES
+                                                   (3, 1), (3, 2), (3, 3), (3, 4), (3, 5);
+
+-- Windbreaker (Product ID: 4)
+INSERT INTO product_size (product_id, size_id) VALUES
+                                                   (4, 1), (4, 2), (4, 3), (4, 4), (4, 5);
+
+-- Thermal Shirt (Product ID: 5)
+INSERT INTO product_size (product_id, size_id) VALUES
+                                                   (5, 1), (5, 2), (5, 3), (5, 4), (5, 5);
+
+-- Hiking Pants (Product ID: 6)
+INSERT INTO product_size (product_id, size_id) VALUES
+                                                   (6, 1), (6, 2), (6, 3), (6, 4), (6, 5);
+
+-- Base Layer Set (Product ID: 7)
+INSERT INTO product_size (product_id, size_id) VALUES
+                                                   (7, 1), (7, 2), (7, 3), (7, 4), (7, 5);
+
+-- Outdoor Socks (Product ID: 8)
+INSERT INTO product_size (product_id, size_id) VALUES
+                                                   (8, 1), (8, 2), (8, 3), (8, 4), (8, 5);
+
+-- Waterproof Hat (Product ID: 9)
+INSERT INTO product_size (product_id, size_id) VALUES
+                                                   (9, 1), (9, 2), (9, 3), (9, 4), (9, 5);
+
+-- Insulated Vest (Product ID: 10)
+INSERT INTO product_size (product_id, size_id) VALUES
+                                                   (10, 1), (10, 2), (10, 3), (10, 4), (10, 5);
