@@ -53,3 +53,136 @@ VALUES
     (38, 'Sandals', 'Casual sandals with adjustable straps', '/productImage/sandals.avif', 0, 59.99, 70, 4, 4),
     (39, 'Slippers', 'Cozy slippers with soft inner lining', '/productImage/slippers.avif', 1, 29.99, 200, 4, 4),
     (40, 'Formal Shoes', 'Classic formal shoes made from genuine leather', '/productImage/formal_shoes.avif', 0, 149.99, 25, 4, 4);
+
+-- Add sizes S (1), M (2), L (3), XL (4), XXL (5) to each product in Outdoor category
+
+-- Outdoor Jacket (Product ID: 1)
+INSERT INTO product_size (product_id, size_id) VALUES
+                                                   (1, 1), (1, 2), (1, 3), (1, 4), (1, 5);
+
+-- Fleece Hoodie (Product ID: 2)
+INSERT INTO product_size (product_id, size_id) VALUES
+                                                   (2, 1), (2, 2), (2, 3), (2, 4), (2, 5);
+
+-- Rain Pants (Product ID: 3)
+INSERT INTO product_size (product_id, size_id) VALUES
+                                                   (3, 1), (3, 2), (3, 3), (3, 4), (3, 5);
+
+-- Windbreaker (Product ID: 4)
+INSERT INTO product_size (product_id, size_id) VALUES
+                                                   (4, 1), (4, 2), (4, 3), (4, 4), (4, 5);
+
+-- Thermal Shirt (Product ID: 5)
+INSERT INTO product_size (product_id, size_id) VALUES
+                                                   (5, 1), (5, 2), (5, 3), (5, 4), (5, 5);
+
+-- Hiking Pants (Product ID: 6)
+INSERT INTO product_size (product_id, size_id) VALUES
+                                                   (6, 1), (6, 2), (6, 3), (6, 4), (6, 5);
+
+-- Base Layer Set (Product ID: 7)
+INSERT INTO product_size (product_id, size_id) VALUES
+                                                   (7, 1), (7, 2), (7, 3), (7, 4), (7, 5);
+
+-- Outdoor Socks (Product ID: 8)
+INSERT INTO product_size (product_id, size_id) VALUES
+                                                   (8, 1), (8, 2), (8, 3), (8, 4), (8, 5);
+
+-- Waterproof Hat (Product ID: 9)
+INSERT INTO product_size (product_id, size_id) VALUES
+                                                   (9, 1), (9, 2), (9, 3), (9, 4), (9, 5);
+
+-- Insulated Vest (Product ID: 10)
+INSERT INTO product_size (product_id, size_id) VALUES
+                                                   (10, 1), (10, 2), (10, 3), (10, 4), (10, 5);
+
+-- Insert sizes XS to XL for Chinos (product_id = 21)
+INSERT INTO product_size (product_id, size_id)
+VALUES
+    (21, 1), -- XS
+    (21, 2), -- S
+    (21, 3), -- M
+    (21, 4), -- L
+    (21, 5); -- XL
+
+-- Insert sizes XS to XL for Jeans (product_id = 22)
+INSERT INTO product_size (product_id, size_id)
+VALUES
+    (22, 1), -- XS
+    (22, 2), -- S
+    (22, 3), -- M
+    (22, 4), -- L
+    (22, 5); -- XL
+
+-- Insert sizes XS to XL for Cargo Pants (product_id = 23)
+INSERT INTO product_size (product_id, size_id)
+VALUES
+    (23, 1), -- XS
+    (23, 2), -- S
+    (23, 3), -- M
+    (23, 4), -- L
+    (23, 5); -- XL
+
+-- Insert sizes XS to XL for Suit Trousers (product_id = 24)
+INSERT INTO product_size (product_id, size_id)
+VALUES
+    (24, 1), -- XS
+    (24, 2), -- S
+    (24, 3), -- M
+    (24, 4), -- L
+    (24, 5); -- XL
+
+-- Insert sizes XS to XL for Joggers (product_id = 25)
+INSERT INTO product_size (product_id, size_id)
+VALUES
+    (25, 1), -- XS
+    (25, 2), -- S
+    (25, 3), -- M
+    (25, 4), -- L
+    (25, 5); -- XL
+
+-- Insert sizes XS to XL for Shorts (product_id = 26)
+INSERT INTO product_size (product_id, size_id)
+VALUES
+    (26, 1), -- XS
+    (26, 2), -- S
+    (26, 3), -- M
+    (26, 4), -- L
+    (26, 5); -- XL
+
+-- Insert sizes XS to XL for Corduroy Pants (product_id = 27)
+INSERT INTO product_size (product_id, size_id)
+VALUES
+    (27, 1), -- XS
+    (27, 2), -- S
+    (27, 3), -- M
+    (27, 4), -- L
+    (27, 5); -- XL
+
+-- Insert sizes XS to XL for Track Pants (product_id = 28)
+INSERT INTO product_size (product_id, size_id)
+VALUES
+    (28, 1), -- XS
+    (28, 2), -- S
+    (28, 3), -- M
+    (28, 4), -- L
+    (28, 5); -- XL
+
+-- Insert sizes XS to XL for Dress Pants (product_id = 29)
+INSERT INTO product_size (product_id, size_id)
+VALUES
+    (29, 1), -- XS
+    (29, 2), -- S
+    (29, 3), -- M
+    (29, 4), -- L
+    (29, 5); -- XL
+
+-- Insert sizes XS to XL for Linen Pants (product_id = 30)
+INSERT INTO product_size (product_id, size_id)
+VALUES
+    (30, 1), -- XS
+    (30, 2), -- S
+    (30, 3), -- M
+    (30, 4), -- L
+    (30, 5); -- XL
+

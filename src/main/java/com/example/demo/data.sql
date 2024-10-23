@@ -24,3 +24,12 @@ INSERT INTO favorite_item (id, user_id, product_id)
 VALUES
     (1, 1, 2),
     (2, 2, 1);
+
+CREATE TABLE product_size (
+                              product_id INT NOT NULL,
+                              size_id BIGINT NOT NULL,
+                              PRIMARY KEY (product_id, size_id),
+                              FOREIGN KEY (product_id) REFERENCES product(id),
+                              FOREIGN KEY (size_id) REFERENCES size(id)
+);
+

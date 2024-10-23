@@ -34,6 +34,10 @@ public class SoldProduct {
     @JoinColumn(name = "product_id", referencedColumnName = "id")
     private Product product;
 
+    @ManyToOne(fetch = FetchType.EAGER) // Add this line for size relationship
+    @JoinColumn(name = "size_id", referencedColumnName = "id") // Assuming your Size entity has an id field
+    private Size size;
+
     @Column(name = "date_when_sold")
     private LocalDate dateWhenSold;
 
