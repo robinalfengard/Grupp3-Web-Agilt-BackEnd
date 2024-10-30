@@ -2,14 +2,14 @@
 INSERT INTO product (id, name, description, image, on_sale, price, number_in_stock, category_id)
 VALUES
     (1, 'Outdoor Jacket', 'Waterproof, breathable jacket for outdoor activities', '/productImage/outdoor_jacket.avif', 1, 149.99, 50, 1),
-    (2, 'Fleece Hoodie', 'Warm fleece hoodie for cold weather', '/productImage/fleece_hoodie.avif', 0, 79.99, 30, 1),
+    (2, 'Jacket', 'Warm jacket for cold weather', '/productImage/fleece_hoodie.avif', 0, 79.99, 30, 1),
     (3, 'Coat', 'Lightweight coat, perfect for autumn', '/productImage/rain_pants.avif', 1, 59.99, 40, 1),
     (4, 'Windbreaker', 'Light windbreaker jacket for windy conditions', '/productImage/windbreaker.avif', 0, 99.99, 25, 1),
     (5, 'Thermal Shirt', 'Moisture-wicking thermal shirt for outdoor use', '/productImage/thermal_shirt.avif', 0, 49.99, 60, 1),
     (6, 'Pants', 'Comfortable pants with stretch', '/productImage/hiking_pants.avif', 1, 89.99, 20, 1),
-    (7, 'Base Layer Set', 'Breathable base layer set for cold weather', '/productImage/base_layer.avif', 0, 69.99, 45, 1),
-    (8, 'Jacket', 'Warm and comfortable jacket', '/productImage/outdoor_socks.avif', 1, 15.99, 100, 1),
-    (9, 'Waterproof Hat', 'Wide-brimmed waterproof hat for sun protection', '/productImage/hat.avif', 0, 24.99, 50, 1),
+    (7, 'Leather jacket', 'Leather jacket for cold weather', '/productImage/base_layer.avif', 0, 69.99, 45, 1),
+    (8, 'Puffy Jacket', 'Warm and comfortable jacket', '/productImage/outdoor_socks.avif', 1, 15.99, 100, 1),
+    (9, 'Coat', 'Warm coat for cold weather', '/productImage/hat.avif', 0, 24.99, 50, 1),
     (10, 'Insulated Vest', 'Lightweight insulated vest for extra warmth', '/productImage/insulated_vest.avif', 1, 89.99, 20, 1);
 
 -- Accessories kategori (category_id = 2)
@@ -30,11 +30,11 @@ VALUES
 INSERT INTO product (id, name, description, image, on_sale, price, number_in_stock, category_id)
 VALUES
     (21, 'Chinos', 'Casual slim-fit chinos for everyday wear', '/productImage/chinos.avif', 1, 59.99, 70, 3),
-    (22, 'Jeans', 'Classic straight-leg jeans with a comfortable fit', '/productImage/jeans.avif', 0, 79.99, 100, 3),
+    (22, 'Dress pants', 'Classic straight-leg dress pants with a comfortable fit', '/productImage/jeans.avif', 0, 79.99, 100, 3),
     (23, 'Cargo Pants', 'Durable cargo pants with multiple pockets', '/productImage/cargo_pants.avif', 1, 69.99, 50, 3),
     (24, 'Suit Trousers', 'Tailored suit trousers for formal occasions', '/productImage/suit_trousers.avif', 0, 99.99, 30, 3),
     (25, 'Comfortable Trousers', 'Relaxed-fit trousers with an elastic waistband', '/productImage/joggers.avif', 1, 49.99, 80, 3),
-    (26, 'Shorts', 'Casual shorts made from lightweight material', '/productImage/shorts.avif', 0, 39.99, 100, 3),
+    (26, 'Casual trousers', 'Casual trousers made from lightweight material', '/productImage/shorts.avif', 0, 39.99, 100, 3),
     (27, 'Corduroy Pants', 'Classic corduroy pants with a vintage style', '/productImage/corduroy_pants.avif', 1, 79.99, 40, 3),
     (28, 'Track Pants', 'Comfortable track pants for sports or lounging', '/productImage/track_pants.avif', 0, 49.99, 90, 3),
     (29, 'Dress Pants', 'Elegant dress pants with a slim fit', '/productImage/dress_pants.avif', 1, 89.99, 30, 3),
@@ -52,7 +52,7 @@ VALUES
     (37, 'Boots', 'Boots with high-quality leather', '/productImage/high_heels.avif', 1, 139.99, 20, 4),
     (38, 'Sandals', 'Casual sandals with adjustable straps', '/productImage/sandals.avif', 0, 59.99, 70, 4),
     (39, 'High Heels', 'Elegant high heels for special occasions', '/productImage/slippers.avif', 1, 29.99, 200, 4),
-    (40, 'Formal Shoes', 'Classic formal shoes made from genuine leather', '/productImage/formal_shoes.avif', 0, 149.99, 25, 4);
+    (40, 'Uggs', 'Classic ugs made for cold weather', '/productImage/formal_shoes.avif', 0, 149.99, 25, 4);
 
 
 
